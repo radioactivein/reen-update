@@ -1,0 +1,45 @@
+@media screen and (max-width:1299px) {          /* xl */
+    
+}
+@media screen and (max-width:1023px) {    
+    
+}
+@media screen and (max-width:991px) {           /* lg */
+    
+}
+@media screen and (max-width:767px) {           /* md */
+    header nav ul {
+        display: flex;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: red;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 0.3s;
+        left: -100vw;
+        opacity: 0;
+    }
+    header nav ul.toggled{
+        opacity: 1;
+        left: 0;
+    }
+    .toggle-bt{
+        display: flex;
+        z-index: 100;
+    }
+    .mobile-nav{
+        display: block;
+    }
+}
+@media screen and (max-width:575px) {           /* sm */
+    
+}
+@media screen and (max-width:425px) {
+    
+}
+@media screen and (max-width:375px) {
+    
+}
