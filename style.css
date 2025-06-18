@@ -5,7 +5,11 @@ a{
 ul{
     list-style: none !important;
 }
-
+header{
+    transition: 0.3s;
+    position: relative;
+    top: 0;
+}
 .header-1-cnt {
     display: flex;
     align-items: center;
@@ -52,7 +56,7 @@ section#hero {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url(img/carousel1.jpg);
+    background: url('img/carousel1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,6 +66,26 @@ section#hero {
 .hero-cnt .desc{
     max-width: 768px;
     background: ;
+}
+
+.toggle-bt.toggled div:nth-child(1){
+    transform: rotate(45deg);
+    top: 10px;
+}
+.toggle-bt.toggled div:nth-child(2){
+    transform: translateX(100vh);
+    opacity: 0;
+}
+.toggle-bt.toggled div:nth-child(3){
+    transform: rotate(-45deg);
+    bottom: 6px;
+}
+
+
+header.scrolled{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 /* 
 @keyframes rotate {
