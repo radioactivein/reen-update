@@ -9,6 +9,8 @@ header{
     transition: 0.3s;
     position: relative;
     top: 0;
+    position: fixed;
+    width: 100%;
 }
 .header-1-cnt {
     display: flex;
@@ -27,11 +29,17 @@ header{
 header nav ul{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+}
+header nav ul a{
+    font-size: 18px;    
+    color: black;
+    text-transform: capitalize;
 }
 .header-cta{
 
 }
+
 /* mobile nav */
 .toggle-bt{
     display: none;
@@ -41,7 +49,7 @@ header nav ul{
 }
 .toggle-bt div {
     position: relative;
-    transition: 0.3s;
+    transition: 1s;
     height: 3px;
     width: 30px;
     background: black;
@@ -56,7 +64,7 @@ section#hero {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('img/carousel1.jpg');
+    background: url('../img/carousel1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,15 +76,15 @@ section#hero {
     background: ;
 }
 
-.toggle-bt.toggled div:nth-child(1){
+.toggle-bt.toggled .first{
     transform: rotate(45deg);
     top: 10px;
 }
-.toggle-bt.toggled div:nth-child(2){
-    transform: translateX(100vh);
+.toggle-bt.toggled .second{
+    transform: translateX(100vw);
     opacity: 0;
 }
-.toggle-bt.toggled div:nth-child(3){
+.toggle-bt.toggled .third{
     transform: rotate(-45deg);
     bottom: 6px;
 }
@@ -100,3 +108,10 @@ img{
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
 } */
+
+
+.div1.hi{
+    color: wheat;
+    background: black;
+    padding: 5px 10px;
+}
