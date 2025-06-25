@@ -1,3 +1,30 @@
+:root {
+  --shadow-color: 0deg 0% 70%;
+  --shadow-elevation-low:
+    0.1px -0.1px 0.1px hsl(var(--shadow-color) / 0.25),
+    0.1px -0.1px 0.1px -1.5px hsl(var(--shadow-color) / 0.22),
+    0.3px -0.3px 0.4px -3px hsl(var(--shadow-color) / 0.2);
+  --shadow-elevation-medium:
+    0.1px -0.1px 0.1px hsl(var(--shadow-color) / 0.26),
+    0.2px -0.3px 0.4px -1px hsl(var(--shadow-color) / 0.24),
+    0.5px -0.7px 0.9px -2px hsl(var(--shadow-color) / 0.22),
+    1.3px -1.7px 2.2px -3px hsl(var(--shadow-color) / 0.2);
+  --shadow-elevation-high:
+    0.1px -0.1px 0.1px hsl(var(--shadow-color) / 0.28),
+    0.3px -0.4px 0.5px -0.5px hsl(var(--shadow-color) / 0.27),
+    0.6px -0.8px 1.1px -1px hsl(var(--shadow-color) / 0.25),
+    1.1px -1.4px 1.9px -1.5px hsl(var(--shadow-color) / 0.24),
+    1.9px -2.4px 3.2px -2px hsl(var(--shadow-color) / 0.23),
+    3.2px -4px 5.4px -2.5px hsl(var(--shadow-color) / 0.21),
+    5.1px -6.4px 8.6px -3px hsl(var(--shadow-color) / 0.2);
+}
+
+
+.clicked{
+    background:linear-gradient(45deg, red,orange);
+    padding: 10px;
+}
+
 a{
     text-decoration: none !important;
     display: inline-block !important;
@@ -16,7 +43,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: var(--number);
+    background-color: var(--my-color);
 }
 .contact {
     display: flex;
@@ -41,22 +69,30 @@ header nav ul a{
 }
 
 /* mobile nav */
-.toggle-bt{
+.toggle-bt {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
 }
 .toggle-bt div {
-    position: relative;
-    transition: 1s;
-    height: 3px;
-    width: 30px;
     background: black;
+    width: 25px;
+    height: 3px;
+    position: relative;
+    transition: 0.3s;
 }
-.toggle-bt div:nth-child(1){
 
+.toggle-bt.clicked .first{
+    transform: rotate(45deg);
+    top: 8px;
 }
+.toggle-bt.clicked .second{
+    transform: translateX(100vw);
+    opacity: 0;
+}
+.toggle-bt.clicked .third{
+    transform: rotate(-45deg);
+    bottom: 8px;
+}
+
 /* hero  */
 section#hero {
     height: 100vh;
@@ -71,22 +107,10 @@ section#hero {
     color: white;
     /* max-width: 768px; */
 }
+
 .hero-cnt .desc{
     max-width: 768px;
     background: ;
-}
-
-.toggle-bt.toggled .first{
-    transform: rotate(45deg);
-    top: 10px;
-}
-.toggle-bt.toggled .second{
-    transform: translateX(100vw);
-    opacity: 0;
-}
-.toggle-bt.toggled .third{
-    transform: rotate(-45deg);
-    bottom: 6px;
 }
 
 
@@ -114,4 +138,57 @@ img{
     color: wheat;
     background: black;
     padding: 5px 10px;
+}
+
+#about{
+    margin: 40px 0;
+}
+
+.feature {
+    background-color: #fafafa;
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.3s;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.feature:hover {
+    box-shadow: #e2e2e2 13px 15px 36px -16px;
+    /* box-shadow: 49px 25px 15px 0px rgba(0, 0, 0, 0.00), 
+    32px 16px 14px 0px rgba(0, 0, 0, 0.01), 
+    18px 9px 12px 0px rgba(0, 0, 0, 0.05), 
+    8px 4px 9px 0px rgba(0, 0, 0, 0.09), 
+    2px 1px 5px 0px rgba(0, 0, 0, 0.10); */
+    transform: translateY(-10px);
+}
+
+.feature::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: lab(53.23% 80.11 67.22);
+    position: relative;
+    left: 0;
+    top: 0;
+    /* transform: rotate(0deg); */
+    z-index: -100;
+    border-radius: 17px;
+    transition: 0.5s;
+}
+
+.feature:hover{
+    transform: rotate(4deg);
+    z-index: 5;
+}
+
+.feature i{
+    transition: 0.3s;
+}
+.feature:hover i{
+    transform: rotate(360deg);
+    filter:invert(1);
+}
+.feature-cnt p{
+
 }
