@@ -1,13 +1,12 @@
 
 $(document).ready(function(){
+
     $('.toggle-bt').click(function(){
         $('.toggle-bt').toggleClass('toggled');
         $('header nav ul').toggleClass('mobile-active');
+        // $('header nav ul').fadeIn();
     });
-})
 
-$('p').click(function(){
-    $('.footer-cnt').toggleClass('clicked')
 })
 
 
