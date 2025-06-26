@@ -180,7 +180,7 @@ img{
 .feature:hover{
     transform: rotate(4deg);
     z-index: 5;
-}
+}ax
 
 .feature i{
     transition: 0.3s;

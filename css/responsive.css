@@ -23,7 +23,8 @@
         flex-direction: column;
         transition: 0.5s;
         opacity: 0;
-        display: none;
+        /* display: none; */
+        z-index: 1001;
     }
     .mobile-active{
         opacity: 1;
