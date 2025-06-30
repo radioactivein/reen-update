@@ -23,6 +23,11 @@
 .clicked{
     background:linear-gradient(45deg, red,orange);
     padding: 10px;
+    position: relative;
+    transition: 0.3s;
+    transform: rotate(10deg);
+
+    anima
 }
 
 a{
