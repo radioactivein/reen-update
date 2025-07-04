@@ -83,12 +83,12 @@ $(window).scroll(function(){
 
 
 
-$('selector').event(function(){
-    $('selector').method();
-    $('selector').method();
-    $('selector').method();
-    $('selector').method();
-})
+// $('selector').event(function(){
+//     $('selector').method();
+//     $('selector').method();
+//     $('selector').method();
+//     $('selector').method();
+// })
 
 // selector = .class, #id , element - html, window, documnet
 // event =  mouse       keyboard    form        load
@@ -103,6 +103,38 @@ $('selector').event(function(){
         //      alert(),    append(),       prepend(),      css(),  
                       
         // more on https://www.w3schools.com/Jquery/jquery_ref_html.asp
+
+
+
+// $('selector').event(function(){
+//     // $('selector').method();
+//     // $('selector').method();
+//     // $('selector').method();
+// })
+
+$('.scroll-bt').click(function(){
+    $('html').scrollTop(0);
+})
+
+
+$(window).scroll(function(){
+
+    var scrolledHeight = $(window).scrollTop();
+
+    if( scrolledHeight >=50){
+        $('header').addClass('updated')
+    }
+    else{
+        $('header').removeClass('updated')
+    }
+})
+
+
+
+
+
+
+
 
 // $('.scroll-bt').click(function(){
 //     $('html, body').scrollTop(0);

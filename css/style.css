@@ -77,6 +77,17 @@ header nav ul a{
 
 }
 
+header a {
+    color:black;
+}
+header.scrolled{
+    background-color: red;
+}
+header.scrolled a{
+    color: white;
+}
+
+
 /* mobile nav */
 .toggle-bt {
     display: none;
